@@ -759,7 +759,7 @@
     </div>
     <!-- Modals Ends -->
     
-    <!-- Contact Start -->
+   <!-- Contact Start -->
     <div class="container-fluid py-5" id="contact">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
@@ -769,8 +769,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="contact-form text-center">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <form action="https://formsubmit.co/iliana.anastasiadou7@gmail.com" method="POST">
                             <div class="form-row">
                                 <div class="control-group col-sm-6">
                                     <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
@@ -784,20 +783,16 @@
                                 </div>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
+                                <input type="text" class="form-control p-4 mb-3" name="subject" placeholder="Subject" required>
                             </div>
                             <div class="control-group">
-                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
-                                    required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
+                                <textarea class="form-control py-3 px-4 mb-3" rows="5" name="message" placeholder="Message" required></textarea>
                             </div>
                             <div>
-                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
-                                    Message</button>
+                                <button class="btn btn-outline-primary" type="submit">Send Message</button>
                             </div>
+
+                            
                         </form>
                     </div>
                 </div>
@@ -805,6 +800,66 @@
         </div>
     </div>
     <!-- Contact End -->
+
+<!-- Toast container -->
+<div id="toast" style="
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+">
+  Message sent successfully!
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.contact-form form');
+    const toast = document.getElementById('toast');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault(); // Αποτροπή default submit και redirect
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Καθαρίζουμε τη φόρμα
+                form.reset();
+
+                // Εμφάνιση toast
+                toast.style.visibility = 'visible';
+                toast.style.opacity = '1';
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    toast.style.visibility = 'hidden';
+                }, 3000);
+            } else {
+                alert("There was an error sending the message.");
+            }
+        } catch (error) {
+            console.error(error);
+            alert("There was an error sending the message.");
+        }
+    });
+});
+</script>
 
 
     <!-- Footer Start -->
@@ -847,11 +902,8 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-        (function(){
-        emailjs.init("GqDYC5DjlaXWBhiNl");
-        })();
-    </script>
+    
+
 
 </body>
 
