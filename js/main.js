@@ -80,7 +80,9 @@
     // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
+        layoutMode: 'masonry',
+        masonry: { columnWidth: '.portfolio-item' },
+        transitionDuration: '0.45s'
     });
     $('#portfolio-flters li').on('click', function () {
         $("#portfolio-flters li").removeClass('active');
