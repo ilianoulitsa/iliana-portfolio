@@ -27,17 +27,6 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
-
-    <!-- Preloader -->
-    <div id="preloader">
-        <span class="pre-title">Iliana Anastasiadou</span>
-        <div class="pre-bar"></div>
-    </div>
-
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
-
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand ml-lg-3">
@@ -83,7 +72,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/photo.JPG" alt="">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/phοto.jpg" alt="">
                 </div>
                 <div class="col-lg-7 text-center text-lg-left">
                     <h3 class="text-white font-weight-normal mb-3">I'm Iliana Anastasiadou</h3>
@@ -183,67 +172,639 @@
 
 
     <!-- Portfolio Start -->
-    <div class="container-fluid" id="portfolio">
+    <div class="container-fluid pt-5 pb-3" id="portfolio">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #005965;">Gallery</h1>
                 <h1 class="position-absolute text-uppercase text-primary">My Gallery</h1>
             </div>
-        </div>
 
-        <!-- Filter nav -->
-        <div class="gf-nav-wrap">
-            <nav class="gf-nav">
-                <button class="gf-btn active" data-cat="all">All</button>
-                <button class="gf-btn" data-cat="logos">Logos</button>
-                <button class="gf-btn" data-cat="socialMedia">Social Media</button>
-                <button class="gf-btn" data-cat="newsletters">Newsletters</button>
-                <button class="gf-btn" data-cat="flyers">Flyers</button>
-                <span class="gf-indicator"></span>
-            </nav>
-        </div>
-
-        <!-- Spotlight body -->
-        <div class="spotlight-body">
-            <!-- Left: sticky preview -->
-            <div class="sp-preview">
-                <div class="sp-img-wrap">
-                    <img class="sp-img-a" src="" alt="">
-                    <img class="sp-img-b" src="" alt="">
-                </div>
-                <div class="sp-meta">
-                    <span class="sp-meta-cat"></span>
-                    <h2 class="sp-meta-name"></h2>
-                    <button class="sp-open-btn">
-                        Δες το project
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
+            <!-- Filters -->
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <ul class="list-inline" id="portfolio-flters">
+                        <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".logos">Logos</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".socialMedia">Social Media</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".newsletters">Newsletters</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".flyers">Flyers</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Right: project list -->
-            <div class="sp-list-wrap">
-                <div class="sp-list" id="sp-list">
-                    <!-- items injected by JS -->
+            <!-- Grid -->
+            <div class="row portfolio-container">           
+
+                <!-- Logos -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item logos">
+                    <div class="portfolio-card">
+                        <img src="img/logos/ahatis/mockup_bottle.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalLogoAgates">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item logos">
+                    <div class="portfolio-card">
+                        <img src="img/logos/diadrasi/mockup_skini.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalLogoDiadrasi">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item logos">
+                    <div class="portfolio-card">
+                        <img src="img/logos/little_garden/pinakida.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalLogoGarden">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item logos">
+                    <div class="portfolio-card">
+                        <img src="img/logos/taskcode/Business_Card_b.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalLogoTaskCode">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item logos">
+                    <div class="portfolio-card">
+                        <img src="img/logos/zen10/box.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalLogoZenTen">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SocialMedia -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
+                    <div class="portfolio-card">
+                        <img src="img/social_media/1.eco/giveaway_blueberies.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalSocialMediaEco">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
+                    <div class="portfolio-card">
+                        <img src="img/social_media/2.farmakeio/organic_shop_bodywash_bathfoam.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalSocialMediaPharmachy">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
+                    <div class="portfolio-card">
+                        <img src="img/social_media/3.eidi_spitiou/palamaiki_paidiki_petseta_thalassis.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalSocialMediaEidhSpitiou">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
+                    <div class="portfolio-card">
+                        <img src="img/social_media/4.mesitiko/diafimisi_meta_katheto.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalSocialMediaMesitiko">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
+                    <div class="portfolio-card">
+                        <img src="img/social_media/5.athlitika/trending_now_converce.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalSocialMediaAthlitika">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
+                    <div class="portfolio-card">
+                        <img src="img/social_media/6.rouxa/summer_sales_cc.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalSocialMediaRouxa">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
+                    <div class="portfolio-card">
+                        <img src="img/social_media/7.paintball/respawn.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalSocialMediaPaintBall">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
+                    <div class="portfolio-card">
+                        <img src="img/social_media/eidi_peripoiisis/comoprof_blackfriday_vafes_mallion.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalSocialMediaEidhPeripoiishs">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
+                    <div class="portfolio-card">
+                        <img src="img/social_media/petshop/skulotrofes.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalsocialMediaPetShop">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
+                    <div class="portfolio-card">
+                        <img src="img/social_media/upiresies_ugeias/sixnes_erotiseis_a.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalsocialMediaYphresiasYgeias">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Newsletter -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item newsletters">
+                    <div class="portfolio-card">
+                        <img src="img/newsletter/eco/xiroi_karpoi.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalNeslettersEco">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item newsletters">
+                    <div class="portfolio-card">
+                        <img src="img/newsletter/lulumelon/lulumelon_xmas_mockup.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalNeslettersLulumelon">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flyers -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item flyers">
+                    <div class="portfolio-card">
+                        <img src="img/flyer/asklipios/mockup_mesa.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalFlyerAsklipios">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item flyers">
+                    <div class="portfolio-card">
+                        <img src="img/flyer//digital_markt/mockup_b.jpg" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <a data-toggle="modal" data-target="#modalFlyerDigitalMartkt">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
     <!-- Portfolio End -->
 
-    <!-- Custom Lightbox -->
-    <div class="glb-overlay" id="glbOverlay">
-        <button class="glb-close" id="glbClose">&times;</button>
-        <div class="glb-inner">
-            <button class="glb-nav glb-prev" id="glbPrev">&#8249;</button>
-            <div class="glb-imgs" id="glbImgs"></div>
-            <button class="glb-nav glb-next" id="glbNext">&#8250;</button>
+    <!-- Modals Starts -->
+    <div class="modal fade" id="modalAll">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/logos/little_garden/pinakida.jpg">
+                        <img src="img/logos/little_garden/mix.jpg">
+                        <img src="img/logos/little_garden/cups.jpg">
+
+                        <!-- SocialMedia -->
+                        <img src="img/logos/taskcode/Business_Card_b.jpg">
+                        <img src="img/logos/taskcode/metal.jpg">
+                        <img src="img/logos/taskcode/wall.jpg">
+
+                        <!-- Logo 3 -->
+                        <img src="img/logos/ahatis/Mockup_bottle_wine_agates.jpg">
+                        <img src="img/logos/ahatis/mockup_bottle.jpg">
+                        <img src="img/logos/ahatis/logo_mockup_toixos.jpg">
+
+                        <!-- Newsletter -->
+                        <img src="img/logos/diadrasi/mockup_tsanta_flyer.jpg">
+                        <img src="img/logos/diadrasi/mockup_skini.jpg">
+                        <img src="img/logos/diadrasi/theatro_mockup.jpg">
+
+                        <!-- Flyers -->
+                        <img src="img/logos/zen10/box.jpg">
+                        <img src="img/logos/zen10/fraoules_b.jpg">
+                        <img src="img/logos/zen10/bag.jpg">
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="glb-counter" id="glbCounter"></div>
     </div>
-    <!-- Lightbox End -->
+
+    <div class="modal fade" id="modalLogoAgates">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/logos/ahatis/logo_mockup_toixos.jpg">
+                        <img src="img/logos/ahatis/mockup_bottle.jpg">
+                        <img src="img/logos/ahatis/Mockup_bottle_wine_agates.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalLogoDiadrasi">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/logos/diadrasi/mockup_skini.jpg">
+                        <img src="img/logos/diadrasi/mockup_tsanta_flyer.jpg">
+                        <img src="img/logos/diadrasi/theatro_mockup.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="modalLogoGarden">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/logos/little_garden/cups.jpg">
+                        <img src="img/logos/little_garden/mix.jpg">
+                        <img src="img/logos/little_garden/pinakida.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        
+    <div class="modal fade" id="modalLogoTaskCode">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/logos/taskcode/Business_Card_b.jpg">
+                        <img src="img/logos/taskcode/metal.jpg">
+                        <img src="img/logos/taskcode/wall.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalLogoZenTen">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/logos/zen10/bag.jpg">
+                        <img src="img/logos/zen10/box.jpg">
+                        <img src="img/logos/zen10/fraoules_b.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSocialMediaEco">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/social_media/1.eco/3+1_logoi_berries.jpg">
+                        <img src="img/social_media/1.eco/afepsima_mirtilou_4.jpg">
+                        <img src="img/social_media/1.eco/amugdala_wma_17_b.jpg">
+                        <img src="img/social_media/1.eco/blackberries_j.jpg">
+                        <img src="img/social_media/1.eco/blueberry_g.jpg">
+                        <img src="img/social_media/1.eco/frozen_mix_berries.jpg">
+                        <img src="img/social_media/1.eco/giveaway_amigdala_b.jpg">
+                        <img src="img/social_media/1.eco/giveaway_blueberies.jpg">
+                        <img src="img/social_media/1.eco/karidi_mualo.jpg">
+                        <img src="img/social_media/1.eco/xartis_b.jpg">
+                        <img src="img/social_media/1.eco/ximos_mirtilou_z.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSocialMediaPharmachy">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/social_media/2.farmakeio/aloe_colors_intothesun.jpg">
+                        <img src="img/social_media/2.farmakeio/avgerinos_body_mist.jpg">
+                        <img src="img/social_media/2.farmakeio/avgerinos_ekptosi.jpg">
+                        <img src="img/social_media/2.farmakeio/avgerinos_primer.jpg">
+                        <img src="img/social_media/2.farmakeio/lavish_care_foundation.jpg">
+                        <img src="img/social_media/2.farmakeio/mesaudaskin_light_clear.jpg">
+                        <img src="img/social_media/2.farmakeio/mesaude_skin_hydraware.jpg">
+                        <img src="img/social_media/2.farmakeio/miss_kay_aromata.jpg">
+                        <img src="img/social_media/2.farmakeio/natura_siberica_biome_cleanser.jpg">
+                        <img src="img/social_media/2.farmakeio/organic_shop_bodywash_bathfoam.jpg">
+                        <img src="img/social_media/2.farmakeio/rilastil_kremaxerion_lipstick.jpg">
+                        <img src="img/social_media/2.farmakeio/youthlab_masks.jpg">
+                        <img src="img/social_media/2.farmakeio/youthlab_vit_c.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSocialMediaEidhSpitiou">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/social_media/3.eidi_spitiou/guy_laroche_petsetes_thalassis.jpg">
+                        <img src="img/social_media/3.eidi_spitiou/nef_nef_paploma_mono_will_dance.jpg">
+                        <img src="img/social_media/3.eidi_spitiou/palamaiki_paidiki_petseta_thalassis.jpg">
+                        <img src="img/social_media/3.eidi_spitiou/petsetes_b.jpg">
+                        <img src="img/social_media/3.eidi_spitiou/rixtari_kanape_horizontal.jpg">
+                        <img src="img/social_media/3.eidi_spitiou/summer_giveaway.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSocialMediaMesitiko">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/social_media/4.mesitiko/diafimisi_meta_katheto.jpg">
+                        <img src="img/social_media/4.mesitiko/spiti_oneiron.jpg">
+                        <img src="img/social_media/4.mesitiko/to_spiti_pou_anazitas_b.jpg">
+                        <img src="img/social_media/4.mesitiko/Vanguard_xalandri.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSocialMediaAthlitika">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/social_media/5.athlitika/adidas_vs_pace.jpg">
+                        <img src="img/social_media/5.athlitika/converse_gunaikeio.jpg">
+                        <img src="img/social_media/5.athlitika/converse_paidika.jpg">
+                        <img src="img/social_media/5.athlitika/game_set_match.jpg">
+                        <img src="img/social_media/5.athlitika/Puma_ready.jpg">
+                        <img src="img/social_media/5.athlitika/trending_now_converce.jpg">
+                        <img src="img/social_media/5.athlitika/under_armour_gs_lockdown.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSocialMediaRouxa">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/social_media/6.rouxa/kapela_oriz.jpg">
+                        <img src="img/social_media/6.rouxa/key.jpg">
+                        <img src="img/social_media/6.rouxa/magio_square.jpg">
+                        <img src="img/social_media/6.rouxa/mayfair_karl_tzin_poukamiso.jpg">
+                        <img src="img/social_media/6.rouxa/mayfair_pinko_mini_love_bag.jpg">
+                        <img src="img/social_media/6.rouxa/summer_sales_cc.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSocialMediaPaintBall">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/social_media/7.paintball/respawn.jpg">
+                        <img src="img/social_media/7.paintball/SnapInsta.to_488205702_1171420551595541_6270127727000922556_n.jpg">
+                        <img src="img/social_media/7.paintball/SnapInsta.to_488961052_1177546350982961_2902190016765277787_n.jpg">
+                        <img src="img/social_media/7.paintball/SnapInsta.to_489456913_1176814567722806_2446642293216048711_n.jpg">
+                        <img src="img/social_media/7.paintball/SnapInsta.to_490022059_1179433497460913_5514216598474655233_n.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSocialMediaEidhPeripoiishs">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/social_media/eidi_peripoiisis/comoprof_blackfriday_avgerinos.jpg">
+                        <img src="img/social_media/eidi_peripoiisis/comoprof_blackfriday_mixanes_kourematos.jpg">
+                        <img src="img/social_media/eidi_peripoiisis/comoprof_blackfriday_sesouar_mallion.jpg">
+                        <img src="img/social_media/eidi_peripoiisis/comoprof_blackfriday_vafes_mallion.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalsocialMediaPetShop">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/social_media/petshop/gatotrofes.jpg">
+                        <img src="img/social_media/petshop/paixnidia_skulou.jpg">
+                        <img src="img/social_media/petshop/skulotrofes.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalsocialMediaYphresiasYgeias">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/social_media/upiresies_ugeias/dorean_sunedria.jpg">
+                        <img src="img/social_media/upiresies_ugeias/kuklos_ponou.jpg">
+                        <img src="img/social_media/upiresies_ugeias/metakomizoume.jpg">
+                        <img src="img/social_media/upiresies_ugeias/quiz_ponos_meta_kalokairi-01.jpg">
+                        <img src="img/social_media/upiresies_ugeias/sixnes_erotiseis_a.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalNeslettersEco">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/newsletter/eco/berries_mockup.jpg">
+                        <img src="img/newsletter/eco/xiroi_karpoi.jpg">
+                        <img src="img/newsletter/eco/xristougeniatikes_suntages_mockup.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalNeslettersLulumelon">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/newsletter/lulumelon/lulumelon_cyber_monday_mockup.jpg">
+                        <img src="img/newsletter/lulumelon/lulumelon_mockup.jpg">
+                        <img src="img/newsletter/lulumelon/lulumelon_xmas_mockup.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalFlyerAsklipios">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/flyer/asklipios/mockup_mesa.jpg">
+                        <img src="img/flyer/asklipios/mockup_ola.jpg">
+                        <img src="img/flyer/asklipios/mockup_piso.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalFlyerDigitalMartkt">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <button type="button" class="close custom-close" data-dismiss="modal">
+                        &times;
+                </button>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <img src="img/flyer/digital_markt/mockup_b.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modals Ends -->
     
    <!-- Contact Start -->
     <div class="container-fluid py-5" id="contact">
@@ -386,500 +947,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    
 
-    <!-- GSAP + ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-    <script>
-    (function () {
-        'use strict';
-
-        /* ── PRELOADER ── */
-        function hidePreloader() {
-            var el = document.getElementById('preloader');
-            if (!el) return;
-            el.style.opacity = '0';
-            el.style.transition = 'opacity 0.65s ease';
-            setTimeout(function () { el.style.display = 'none'; }, 650);
-        }
-
-                /* ── SPOTLIGHT GALLERY DATA ── */
-        var GALLERY = [
-            {
-                id: 'achatis', name: 'Αχάτης', cat: 'logos', catLabel: 'Logo',
-                thumb: 'img/logos/ahatis/mockup_bottle.jpg',
-                imgs: [
-                    'img/logos/ahatis/logo_mockup_toixos.jpg',
-                    'img/logos/ahatis/mockup_bottle.jpg',
-                    'img/logos/ahatis/Mockup_bottle_wine_agates.jpg'
-                ]
-            },
-            {
-                id: 'diadrasi', name: 'Διάδραση', cat: 'logos', catLabel: 'Logo',
-                thumb: 'img/logos/diadrasi/mockup_skini.jpg',
-                imgs: [
-                    'img/logos/diadrasi/mockup_skini.jpg',
-                    'img/logos/diadrasi/mockup_tsanta_flyer.jpg',
-                    'img/logos/diadrasi/theatro_mockup.jpg'
-                ]
-            },
-            {
-                id: 'little-garden', name: 'Little Garden', cat: 'logos', catLabel: 'Logo',
-                thumb: 'img/logos/little_garden/pinakida.jpg',
-                imgs: [
-                    'img/logos/little_garden/cups.jpg',
-                    'img/logos/little_garden/mix.jpg',
-                    'img/logos/little_garden/pinakida.jpg'
-                ]
-            },
-            {
-                id: 'taskcode', name: 'TaskCode', cat: 'logos', catLabel: 'Logo',
-                thumb: 'img/logos/taskcode/Business_Card_b.jpg',
-                imgs: [
-                    'img/logos/taskcode/Business_Card_b.jpg',
-                    'img/logos/taskcode/metal.jpg',
-                    'img/logos/taskcode/wall.jpg'
-                ]
-            },
-            {
-                id: 'zen10', name: 'Zen10', cat: 'logos', catLabel: 'Logo',
-                thumb: 'img/logos/zen10/box.jpg',
-                imgs: [
-                    'img/logos/zen10/bag.jpg',
-                    'img/logos/zen10/box.jpg',
-                    'img/logos/zen10/fraoules_b.jpg'
-                ]
-            },
-            {
-                id: 'eco-berries', name: 'Eco Berries', cat: 'socialMedia', catLabel: 'Social Media',
-                thumb: 'img/social_media/1.eco/giveaway_blueberies.jpg',
-                imgs: [
-                    'img/social_media/1.eco/3+1_logoi_berries.jpg',
-                    'img/social_media/1.eco/afepsima_mirtilou_4.jpg',
-                    'img/social_media/1.eco/amugdala_wma_17_b.jpg',
-                    'img/social_media/1.eco/blackberries_j.jpg',
-                    'img/social_media/1.eco/blueberry_g.jpg',
-                    'img/social_media/1.eco/frozen_mix_berries.jpg',
-                    'img/social_media/1.eco/giveaway_amigdala_b.jpg',
-                    'img/social_media/1.eco/giveaway_blueberies.jpg',
-                    'img/social_media/1.eco/karidi_mualo.jpg',
-                    'img/social_media/1.eco/xartis_b.jpg',
-                    'img/social_media/1.eco/ximos_mirtilou_z.jpg'
-                ]
-            },
-            {
-                id: 'farmakeio', name: 'Φαρμακείο', cat: 'socialMedia', catLabel: 'Social Media',
-                thumb: 'img/social_media/2.farmakeio/organic_shop_bodywash_bathfoam.jpg',
-                imgs: [
-                    'img/social_media/2.farmakeio/aloe_colors_intothesun.jpg',
-                    'img/social_media/2.farmakeio/avgerinos_body_mist.jpg',
-                    'img/social_media/2.farmakeio/avgerinos_ekptosi.jpg',
-                    'img/social_media/2.farmakeio/avgerinos_primer.jpg',
-                    'img/social_media/2.farmakeio/lavish_care_foundation.jpg',
-                    'img/social_media/2.farmakeio/mesaudaskin_light_clear.jpg',
-                    'img/social_media/2.farmakeio/mesaude_skin_hydraware.jpg',
-                    'img/social_media/2.farmakeio/miss_kay_aromata.jpg',
-                    'img/social_media/2.farmakeio/natura_siberica_biome_cleanser.jpg',
-                    'img/social_media/2.farmakeio/organic_shop_bodywash_bathfoam.jpg',
-                    'img/social_media/2.farmakeio/rilastil_kremaxerion_lipstick.jpg',
-                    'img/social_media/2.farmakeio/youthlab_masks.jpg',
-                    'img/social_media/2.farmakeio/youthlab_vit_c.jpg'
-                ]
-            },
-            {
-                id: 'eidi-spitiou', name: 'Είδη Σπιτιού', cat: 'socialMedia', catLabel: 'Social Media',
-                thumb: 'img/social_media/3.eidi_spitiou/palamaiki_paidiki_petseta_thalassis.jpg',
-                imgs: [
-                    'img/social_media/3.eidi_spitiou/guy_laroche_petsetes_thalassis.jpg',
-                    'img/social_media/3.eidi_spitiou/nef_nef_paploma_mono_will_dance.jpg',
-                    'img/social_media/3.eidi_spitiou/palamaiki_paidiki_petseta_thalassis.jpg',
-                    'img/social_media/3.eidi_spitiou/petsetes_b.jpg',
-                    'img/social_media/3.eidi_spitiou/rixtari_kanape_horizontal.jpg',
-                    'img/social_media/3.eidi_spitiou/summer_giveaway.jpg'
-                ]
-            },
-            {
-                id: 'mesitiko', name: 'Μεσιτικό', cat: 'socialMedia', catLabel: 'Social Media',
-                thumb: 'img/social_media/4.mesitiko/diafimisi_meta_katheto.jpg',
-                imgs: [
-                    'img/social_media/4.mesitiko/diafimisi_meta_katheto.jpg',
-                    'img/social_media/4.mesitiko/spiti_oneiron.jpg',
-                    'img/social_media/4.mesitiko/to_spiti_pou_anazitas_b.jpg',
-                    'img/social_media/4.mesitiko/Vanguard_xalandri.jpg'
-                ]
-            },
-            {
-                id: 'athlitika', name: 'Αθλητικά', cat: 'socialMedia', catLabel: 'Social Media',
-                thumb: 'img/social_media/5.athlitika/trending_now_converce.jpg',
-                imgs: [
-                    'img/social_media/5.athlitika/adidas_vs_pace.jpg',
-                    'img/social_media/5.athlitika/converse_gunaikeio.jpg',
-                    'img/social_media/5.athlitika/converse_paidika.jpg',
-                    'img/social_media/5.athlitika/game_set_match.jpg',
-                    'img/social_media/5.athlitika/Puma_ready.jpg',
-                    'img/social_media/5.athlitika/trending_now_converce.jpg',
-                    'img/social_media/5.athlitika/under_armour_gs_lockdown.jpg'
-                ]
-            },
-            {
-                id: 'rouxa', name: 'Ρούχα', cat: 'socialMedia', catLabel: 'Social Media',
-                thumb: 'img/social_media/6.rouxa/summer_sales_cc.jpg',
-                imgs: [
-                    'img/social_media/6.rouxa/kapela_oriz.jpg',
-                    'img/social_media/6.rouxa/key.jpg',
-                    'img/social_media/6.rouxa/magio_square.jpg',
-                    'img/social_media/6.rouxa/mayfair_karl_tzin_poukamiso.jpg',
-                    'img/social_media/6.rouxa/mayfair_pinko_mini_love_bag.jpg',
-                    'img/social_media/6.rouxa/summer_sales_cc.jpg'
-                ]
-            },
-            {
-                id: 'paintball', name: 'Paintball', cat: 'socialMedia', catLabel: 'Social Media',
-                thumb: 'img/social_media/7.paintball/respawn.jpg',
-                imgs: [
-                    'img/social_media/7.paintball/respawn.jpg',
-                    'img/social_media/7.paintball/SnapInsta.to_488205702_1171420551595541_6270127727000922556_n.jpg',
-                    'img/social_media/7.paintball/SnapInsta.to_488961052_1177546350982961_2902190016765277787_n.jpg',
-                    'img/social_media/7.paintball/SnapInsta.to_489456913_1176814567722806_2446642293216048711_n.jpg',
-                    'img/social_media/7.paintball/SnapInsta.to_490022059_1179433497460913_5514196598474655233_n.jpg'
-                ]
-            },
-            {
-                id: 'eidi-peripoiisis', name: 'Είδη Περιποίησης', cat: 'socialMedia', catLabel: 'Social Media',
-                thumb: 'img/social_media/eidi_peripoiisis/comoprof_blackfriday_vafes_mallion.jpg',
-                imgs: [
-                    'img/social_media/eidi_peripoiisis/comoprof_blackfriday_avgerinos.jpg',
-                    'img/social_media/eidi_peripoiisis/comoprof_blackfriday_mixanes_kourematos.jpg',
-                    'img/social_media/eidi_peripoiisis/comoprof_blackfriday_sesouar_mallion.jpg',
-                    'img/social_media/eidi_peripoiisis/comoprof_blackfriday_vafes_mallion.jpg'
-                ]
-            },
-            {
-                id: 'petshop', name: 'Pet Shop', cat: 'socialMedia', catLabel: 'Social Media',
-                thumb: 'img/social_media/petshop/skulotrofes.jpg',
-                imgs: [
-                    'img/social_media/petshop/gatotrofes.jpg',
-                    'img/social_media/petshop/paixnidia_skulou.jpg',
-                    'img/social_media/petshop/skulotrofes.jpg'
-                ]
-            },
-            {
-                id: 'ygeias', name: 'Υπηρεσίες Υγείας', cat: 'socialMedia', catLabel: 'Social Media',
-                thumb: 'img/social_media/upiresies_ugeias/sixnes_erotiseis_a.jpg',
-                imgs: [
-                    'img/social_media/upiresies_ugeias/dorean_sunedria.jpg',
-                    'img/social_media/upiresies_ugeias/kuklos_ponou.jpg',
-                    'img/social_media/upiresies_ugeias/metakomizoume.jpg',
-                    'img/social_media/upiresies_ugeias/quiz_ponos_meta_kalokairi-01.jpg',
-                    'img/social_media/upiresies_ugeias/sixnes_erotiseis_a.jpg'
-                ]
-            },
-            {
-                id: 'eco-newsletter', name: 'Eco Newsletter', cat: 'newsletters', catLabel: 'Newsletter',
-                thumb: 'img/newsletter/eco/xiroi_karpoi.jpg',
-                imgs: [
-                    'img/newsletter/eco/berries_mockup.jpg',
-                    'img/newsletter/eco/xiroi_karpoi.jpg',
-                    'img/newsletter/eco/xristougeniatikes_suntages_mockup.jpg'
-                ]
-            },
-            {
-                id: 'lulumelon', name: 'Lulumelon', cat: 'newsletters', catLabel: 'Newsletter',
-                thumb: 'img/newsletter/lulumelon/lulumelon_xmas_mockup.jpg',
-                imgs: [
-                    'img/newsletter/lulumelon/lulumelon_cyber_monday_mockup.jpg',
-                    'img/newsletter/lulumelon/lulumelon_mockup.jpg',
-                    'img/newsletter/lulumelon/lulumelon_xmas_mockup.jpg'
-                ]
-            },
-            {
-                id: 'asklipios', name: 'Ασκληπιός', cat: 'flyers', catLabel: 'Flyer',
-                thumb: 'img/flyer/asklipios/mockup_mesa.jpg',
-                imgs: [
-                    'img/flyer/asklipios/mockup_mesa.jpg',
-                    'img/flyer/asklipios/mockup_ola.jpg',
-                    'img/flyer/asklipios/mockup_piso.jpg'
-                ]
-            },
-            {
-                id: 'digital-marketing', name: 'Digital Marketing', cat: 'flyers', catLabel: 'Flyer',
-                thumb: 'img/flyer/digital_markt/mockup_b.jpg',
-                imgs: [
-                    'img/flyer/digital_markt/mockup_b.jpg'
-                ]
-            }
-        ];
-
-        /* ── SPOTLIGHT FUNCTIONS ── */
-        var spFilterCat  = 'all';
-        var spImgCurrent = 'a';
-        var spXfadeTimer = null;
-
-        function getFiltered() {
-            return spFilterCat === 'all'
-                ? GALLERY
-                : GALLERY.filter(function (p) { return p.cat === spFilterCat; });
-        }
-
-        function setPreviewImmediate(proj) {
-            var imgA    = document.querySelector('.sp-img-a');
-            var imgB    = document.querySelector('.sp-img-b');
-            var metaCat = document.querySelector('.sp-meta-cat');
-            var metaName = document.querySelector('.sp-meta-name');
-            var btn      = document.querySelector('.sp-open-btn');
-            if (!imgA) return;
-            imgA.src = proj.thumb;
-            imgA.style.transition = 'none';
-            imgA.style.opacity = '1';
-            if (imgB) { imgB.style.transition = 'none'; imgB.style.opacity = '0'; }
-            spImgCurrent = 'a';
-            if (metaCat)  { metaCat.textContent = proj.catLabel; metaCat.className = 'sp-meta-cat sp-cat-' + proj.cat; }
-            if (metaName)  metaName.textContent  = proj.name;
-            if (btn)       btn._proj = proj;
-            setTimeout(function () {
-                if (imgA) imgA.style.transition = '';
-                if (imgB) imgB.style.transition = '';
-            }, 50);
-        }
-
-        function updatePreview(proj) {
-            var imgA     = document.querySelector('.sp-img-a');
-            var imgB     = document.querySelector('.sp-img-b');
-            var metaCat  = document.querySelector('.sp-meta-cat');
-            var metaName = document.querySelector('.sp-meta-name');
-            var btn      = document.querySelector('.sp-open-btn');
-            if (!imgA || !imgB) return;
-            if (spXfadeTimer) clearTimeout(spXfadeTimer);
-            if (spImgCurrent === 'a') {
-                imgB.src = proj.thumb;
-                imgB.style.opacity = '1';
-                imgA.style.opacity = '0';
-                spImgCurrent = 'b';
-            } else {
-                imgA.src = proj.thumb;
-                imgA.style.opacity = '1';
-                imgB.style.opacity = '0';
-                spImgCurrent = 'a';
-            }
-            if (metaCat)  { metaCat.textContent = proj.catLabel; metaCat.className = 'sp-meta-cat sp-cat-' + proj.cat; }
-            if (metaName)  metaName.textContent  = proj.name;
-            if (btn)       btn._proj = proj;
-        }
-
-        function renderSpotlight() {
-            var list = document.getElementById('sp-list');
-            if (!list) return;
-            var filtered = getFiltered();
-            list.innerHTML = '';
-            filtered.forEach(function (proj, idx) {
-                var item = document.createElement('div');
-                item.className = 'sp-item' + (idx === 0 ? ' active' : '');
-                var imgCount = proj.imgs.length;
-                var imgLabel = imgCount === 1 ? 'εικόνα' : 'εικόνες';
-                item.innerHTML =
-                    '<div class="sp-thumb-wrap"><img class="sp-thumb" src="' + proj.thumb + '" alt="' + proj.name + '" loading="lazy"></div>' +
-                    '<div class="sp-item-meta">' +
-                        '<span class="sp-item-cat sp-cat-' + proj.cat + '">' + proj.catLabel + '</span>' +
-                        '<p class="sp-item-name">' + proj.name + '</p>' +
-                    '</div>' +
-                    '<div class="sp-item-count">' + imgCount + ' ' + imgLabel + '</div>';
-
-                item.addEventListener('mouseenter', function () {
-                    list.querySelectorAll('.sp-item').forEach(function (el) { el.classList.remove('active'); });
-                    item.classList.add('active');
-                    updatePreview(proj);
-                });
-                item.addEventListener('click', function () { openGlb(proj); });
-                list.appendChild(item);
-            });
-            if (filtered.length > 0) setPreviewImmediate(filtered[0]);
-        }
-
-        function initSpotlightFilter() {
-            var btns      = document.querySelectorAll('.gf-btn');
-            var indicator = document.querySelector('.gf-indicator');
-
-            function moveIndicator(btn) {
-                if (!indicator) return;
-                indicator.style.width = btn.offsetWidth + 'px';
-                indicator.style.left  = btn.offsetLeft  + 'px';
-            }
-
-            btns.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    btns.forEach(function (b) { b.classList.remove('active'); });
-                    btn.classList.add('active');
-                    spFilterCat = btn.getAttribute('data-cat');
-                    moveIndicator(btn);
-                    renderSpotlight();
-                });
-            });
-
-            var activeBtn = document.querySelector('.gf-btn.active');
-            if (activeBtn) {
-                // defer to ensure layout is ready
-                requestAnimationFrame(function () { moveIndicator(activeBtn); });
-            }
-        }
-
-        /* ── LIGHTBOX ── */
-        var glbCurrentProj = null;
-        var glbCurrentIdx  = 0;
-
-        function openGlb(proj) {
-            glbCurrentProj = proj;
-            glbCurrentIdx  = 0;
-            renderGlb();
-            var overlay = document.getElementById('glbOverlay');
-            if (overlay) {
-                overlay.style.display = 'flex';
-                requestAnimationFrame(function () { overlay.classList.add('glb-visible'); });
-            }
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeGlb() {
-            var overlay = document.getElementById('glbOverlay');
-            if (overlay) {
-                overlay.classList.remove('glb-visible');
-                setTimeout(function () { overlay.style.display = 'none'; }, 400);
-            }
-            document.body.style.overflow = '';
-        }
-
-        function renderGlb() {
-            var imgs    = document.getElementById('glbImgs');
-            var counter = document.getElementById('glbCounter');
-            if (!imgs || !glbCurrentProj) return;
-            imgs.innerHTML = '<img src="' + glbCurrentProj.imgs[glbCurrentIdx] + '" alt="">';
-            if (counter) counter.textContent = (glbCurrentIdx + 1) + ' / ' + glbCurrentProj.imgs.length;
-        }
-
-        function initLightbox() {
-            var overlay = document.getElementById('glbOverlay');
-            var closeBtn = document.getElementById('glbClose');
-            var prevBtn  = document.getElementById('glbPrev');
-            var nextBtn  = document.getElementById('glbNext');
-
-            if (closeBtn) closeBtn.addEventListener('click', closeGlb);
-
-            if (prevBtn) prevBtn.addEventListener('click', function () {
-                if (!glbCurrentProj) return;
-                glbCurrentIdx = (glbCurrentIdx - 1 + glbCurrentProj.imgs.length) % glbCurrentProj.imgs.length;
-                renderGlb();
-            });
-
-            if (nextBtn) nextBtn.addEventListener('click', function () {
-                if (!glbCurrentProj) return;
-                glbCurrentIdx = (glbCurrentIdx + 1) % glbCurrentProj.imgs.length;
-                renderGlb();
-            });
-
-            if (overlay) overlay.addEventListener('click', function (e) {
-                if (e.target === overlay) closeGlb();
-            });
-
-            document.addEventListener('keydown', function (e) {
-                if (!overlay || !overlay.classList.contains('glb-visible')) return;
-                if (e.key === 'Escape') closeGlb();
-                if (e.key === 'ArrowLeft'  && prevBtn) prevBtn.click();
-                if (e.key === 'ArrowRight' && nextBtn) nextBtn.click();
-            });
-
-            var openBtn = document.querySelector('.sp-open-btn');
-            if (openBtn) openBtn.addEventListener('click', function () {
-                if (this._proj) openGlb(this._proj);
-            });
-        }
-
-        /* ── CUSTOM CURSOR ── */
-        function initCursor() {
-            if ('ontouchstart' in window) return;
-            var dot  = document.querySelector('.cursor-dot');
-            var ring = document.querySelector('.cursor-ring');
-            if (!dot || !ring) return;
-
-            var mx = window.innerWidth / 2, my = window.innerHeight / 2;
-            var rx = mx, ry = my;
-
-            document.addEventListener('mousemove', function (e) {
-                mx = e.clientX; my = e.clientY;
-                dot.style.left = mx + 'px';
-                dot.style.top  = my + 'px';
-            });
-
-            (function tick() {
-                rx += (mx - rx) * 0.1;
-                ry += (my - ry) * 0.1;
-                ring.style.left = rx + 'px';
-                ring.style.top  = ry + 'px';
-                requestAnimationFrame(tick);
-            })();
-
-            document.querySelectorAll('a, button, .sp-item, .sp-open-btn, .gf-btn, .nav-link').forEach(function (el) {
-                el.addEventListener('mouseenter', function () {
-                    dot.classList.add('cursor-hover');
-                    ring.classList.add('cursor-hover');
-                });
-                el.addEventListener('mouseleave', function () {
-                    dot.classList.remove('cursor-hover');
-                    ring.classList.remove('cursor-hover');
-                });
-            });
-        }
-
-        /* ── GSAP SCROLL ANIMATIONS ── */
-        function initAnimations() {
-            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-            gsap.registerPlugin(ScrollTrigger);
-
-            gsap.timeline({ delay: 1.5 })
-                .from('#home .col-lg-5', { x: -70, opacity: 0, duration: 1.1, ease: 'power3.out' })
-                .from('#home .col-lg-7', { x:  60, opacity: 0, duration: 0.9, ease: 'power3.out' }, '-=0.55');
-
-            gsap.timeline({
-                scrollTrigger: { trigger: '#about', start: 'top 76%', once: true }
-            })
-            .from('#about .position-relative', { y: 40, opacity: 0, duration: 0.7, ease: 'power2.out' })
-            .from('#about .col-lg-5',           { x: -60, opacity: 0, duration: 1.0, ease: 'power3.out' }, '-=0.3')
-            .from('#about .col-lg-7 > *',       { x:  50, opacity: 0, duration: 0.7, stagger: 0.12, ease: 'power2.out' }, '-=0.65');
-
-            gsap.timeline({
-                scrollTrigger: { trigger: '#skill', start: 'top 76%', once: true }
-            })
-            .from('#skill .position-relative', { y: 40, opacity: 0, duration: 0.7, ease: 'power2.out' })
-            .from('#skill .skill',              { y: 35, opacity: 0, duration: 0.6, stagger: 0.15, ease: 'power2.out' }, '-=0.3');
-
-            gsap.timeline({
-                scrollTrigger: { trigger: '#portfolio', start: 'top 76%', once: true }
-            })
-            .from('#portfolio .position-relative', { y: 40, opacity: 0, duration: 0.7, ease: 'power2.out' })
-            .from('.gf-nav-wrap',                  { y: 20, opacity: 0, duration: 0.5, ease: 'power2.out' }, '-=0.3')
-            .from('.sp-preview',                   { x: -40, opacity: 0, duration: 0.7, ease: 'power2.out', clearProps: 'opacity,transform' }, '-=0.2')
-            .from('.sp-list-wrap',                 { x:  40, opacity: 0, duration: 0.7, ease: 'power2.out', clearProps: 'opacity,transform' }, '-=0.55');
-
-            gsap.timeline({
-                scrollTrigger: { trigger: '#contact', start: 'top 76%', once: true }
-            })
-            .from('#contact .position-relative', { y: 40, opacity: 0, duration: 0.7, ease: 'power2.out' })
-            .from('#contact .contact-form',       { y: 35, opacity: 0, duration: 0.7, ease: 'power2.out' }, '-=0.3');
-        }
-
-        /* ── INIT ── */
-        document.addEventListener('DOMContentLoaded', function () {
-            renderSpotlight();
-            initSpotlightFilter();
-            initLightbox();
-            initCursor();
-        });
-
-        window.addEventListener('load', function () {
-            setTimeout(hidePreloader, 950);
-            initAnimations();
-        });
-    })();
-    </script>
 
 </body>
 
