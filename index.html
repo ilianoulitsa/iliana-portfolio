@@ -1,954 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Portfolio</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iliana Anastasiadou — Graphic Designer</title>
+  <meta name="description" content="Iliana Anastasiadou is a graphic designer based in Thessaloniki — branding, social media, newsletters and print.">
+  <meta property="og:title" content="Iliana Anastasiadou — Graphic Designer">
+  <meta property="og:description" content="Branding, social media, newsletters & print. Based in Thessaloniki.">
+  <meta property="og:image" content="https://anastasiadou-iliana.gr/img/iliana_portrait.jpg">
+  <meta name="theme-color" content="#F6E7B4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%239E1F63'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Helvetica,Arial,sans-serif' font-weight='600' font-size='26' fill='%23F9D86B'%3EIA%3C/text%3E%3C/svg%3E">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="css/site.css" rel="stylesheet">
 </head>
+<body>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <!-- Navbar Start -->
-    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-        <a href="index.html" class="navbar-brand ml-lg-3">
-            <h1 class="m-0 display-5"><span class="text-primary">Port</span>Folio</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-            <div class="navbar-nav m-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>                
-                <a href="#skill" class="nav-item nav-link">Skill</a>
-                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>                                
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-        </div>
+  <a class="skip" href="#work">Skip to work</a>
+
+  <header class="header" id="top">
+    <a href="#top" class="name">Iliana Anastasiadou</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#index">Index</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <!-- Navbar End -->
+  </header>
 
-
-    <!-- Intro Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>        
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
+  <main>
+    <!-- ============ INTRO ============ -->
+    <section class="intro" id="intro">
+      <div class="intro__center">
+        <p class="intro__eyebrow fade">Graphic Designer</p>
+        <h1 class="intro__title fade">
+          Based in Thessaloniki, creating
+          <a href="#index" data-jump="branding" class="word" style="--c:#9E1F63">brand identities</a>,
+          <a href="#index" data-jump="social" class="word" style="--c:#D9481C">social&nbsp;media</a>,
+          <a href="#index" data-jump="newsletter" class="word" style="--c:#1F7F82">newsletters</a>
+          &amp;&nbsp;<a href="#index" data-jump="print" class="word" style="--c:#E0213F">print</a>.
+        </h1>
+        <div class="intro__cta fade">
+          <a href="#work" class="cta cta--ink">See my work <span aria-hidden="true">↓</span></a>
+          <a href="cv_anastasiadou.pdf" class="cta cta--ghost" download>Download CV</a>
         </div>
-    </div>
-    <!--Intro End -->
+      </div>
+      <figure class="intro__photo fade">
+        <img src="img/iliana_portrait.jpg" alt="Iliana Anastasiadou" fetchpriority="high">
+      </figure>
+    </section>
 
+    <!-- ============ FEATURED (stacking cards) ============ -->
+    <section class="featured" id="work" aria-label="Featured work">
+      <div class="section-head">
+        <h2 class="label">Featured work</h2>
+        <span class="label" id="feat-count"></span>
+      </div>
+      <div class="stack" id="stack"></div>
+    </section>
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/cv_photo.jpg" alt="">
-                </div>
-                <div class="col-lg-7 text-center text-lg-left">
-                    <h3 class="text-white font-weight-normal mb-3">I'm Iliana Anastasiadou</h3>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">Graphic Designer</div>
-                    <div style="margin-top: 10%;">
-                        <a href="cv_anastasiadou.pdf" download class="btn btn-outline-light">
-                            Download CV
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <!-- ============ INDEX ============ -->
+    <section class="index" id="index">
+      <div class="index__head">
+        <h2 class="index__title">All projects</h2>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="branding">Branding</button>
+          <button class="filter" data-filter="social">Social Media</button>
+          <button class="filter" data-filter="newsletter">Newsletters</button>
+          <button class="filter" data-filter="print">Print</button>
         </div>
-    </div>
-    <!-- Header End -->
+      </div>
+      <ol class="rows" id="rows"></ol>
+    </section>
 
-
-    <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #005965;">About</h1>
-                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <h3 class="mb-4">Graphic Designer</h3>
-                    <p>I am a Graphic Designer with a love for visual storytelling and creative exploration. I draw inspiration from images, colors, and the small details of everyday life, shaping them into clean and contemporary design. I believe in the power of simplicity, aesthetic consistency, and the fresh perspective that makes an idea stand out.</p>
-                    <div class="row mb-3">
-                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Iliana Anastasiadou</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">17 June 1993</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">6930730568</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">iliana.anastasiadou7@gmail.com</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">Evosmos, Thessaloniki</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
-                    </div>                    
-                </div>
-            </div>
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <h2 class="label">About</h2>
+      <div class="about__body">
+        <figure class="about__photo fade">
+          <img src="img/IMG_0181.JPG" alt="Portrait of Iliana Anastasiadou" loading="lazy">
+        </figure>
+        <div class="about__text fade">
+          <p class="lead">
+            I'm a graphic designer with a love for visual storytelling and creative exploration.
+            I draw inspiration from images, colours and the small details of everyday life,
+            shaping them into clean and contemporary design.
+          </p>
+          <dl class="facts">
+            <div><dt>Location</dt><dd>Thessaloniki</dd></div>
+            <div><dt>Services</dt><dd>Brand identity, social media, newsletters, print</dd></div>
+            <div><dt>Tools</dt><dd>Photoshop, Illustrator, Premiere, Figma</dd></div>
+            <div><dt>Languages</dt><dd>Greek, English</dd></div>
+          </dl>
+          <a href="cv_anastasiadou.pdf" class="text-link" download>Download CV ↓</a>
         </div>
-    </div>
-    <!-- About End -->
+      </div>
+    </section>
 
-
-    <!-- Skill Start -->
-    <div class="container-fluid py-5" id="skill">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #005965;">Skills</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Photoshop</h6>
-                            <h6 class="font-weight-bold">95%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Illustrator</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                   <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Premiere</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Figma</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="contact__inner">
+        <div>
+          <h2 class="label">Contact</h2>
+          <p class="contact__title">Have a project in mind?<br><span>Let's talk.</span></p>
+          <a class="contact__link" href="mailto:iliana.anastasiadou7@gmail.com">iliana.anastasiadou7@gmail.com</a>
+          <a class="contact__link contact__link--muted" href="tel:+306930730568">+30 693 073 0568</a>
         </div>
+
+        <form class="form" id="contact-form" action="https://formsubmit.co/iliana.anastasiadou7@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New message from your portfolio">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="field"><span>Name</span><input type="text" name="name" required autocomplete="name"></label>
+          <label class="field"><span>Email</span><input type="email" name="email" required autocomplete="email"></label>
+          <label class="field field--full"><span>Message</span><textarea name="message" rows="4" required></textarea></label>
+          <div class="form__foot">
+            <button class="btn" type="submit">Send message →</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Iliana Anastasiadou</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <!-- cursor-following preview for the index -->
+  <div class="peek" id="peek" aria-hidden="true"><img alt=""></div>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden>
+    <div class="lightbox__bar">
+      <p><span class="lightbox__title" id="lb-title"></span> <span class="lightbox__cat" id="lb-cat"></span></p>
+      <span class="lightbox__count" id="lb-count"></span>
+      <button class="lightbox__close" id="lb-close" aria-label="Close">Close ✕</button>
     </div>
-    <!-- Skill End -->
-
-
-    <!-- Portfolio Start -->
-    <div class="container-fluid pt-5 pb-3" id="portfolio">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #005965;">Gallery</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Gallery</h1>
-            </div>
-
-            <!-- Filters -->
-            <div class="row">
-                <div class="col-12 text-center mb-4">
-                    <ul class="list-inline" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".logos">Logos</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".socialMedia">Social Media</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".newsletters">Newsletters</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".flyers">Flyers</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Grid -->
-            <div class="row portfolio-container">           
-
-                <!-- Logos -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item logos">
-                    <div class="portfolio-card">
-                        <img src="img/logos/ahatis/mockup_bottle.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalLogoAgates">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item logos">
-                    <div class="portfolio-card">
-                        <img src="img/logos/diadrasi/mockup_skini.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalLogoDiadrasi">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item logos">
-                    <div class="portfolio-card">
-                        <img src="img/logos/little_garden/pinakida.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalLogoGarden">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item logos">
-                    <div class="portfolio-card">
-                        <img src="img/logos/taskcode/Business_Card_b.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalLogoTaskCode">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item logos">
-                    <div class="portfolio-card">
-                        <img src="img/logos/zen10/box.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalLogoZenTen">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SocialMedia -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
-                    <div class="portfolio-card">
-                        <img src="img/social_media/1.eco/giveaway_blueberies.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalSocialMediaEco">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
-                    <div class="portfolio-card">
-                        <img src="img/social_media/2.farmakeio/organic_shop_bodywash_bathfoam.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalSocialMediaPharmachy">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
-                    <div class="portfolio-card">
-                        <img src="img/social_media/3.eidi_spitiou/palamaiki_paidiki_petseta_thalassis.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalSocialMediaEidhSpitiou">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
-                    <div class="portfolio-card">
-                        <img src="img/social_media/4.mesitiko/diafimisi_meta_katheto.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalSocialMediaMesitiko">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
-                    <div class="portfolio-card">
-                        <img src="img/social_media/5.athlitika/trending_now_converce.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalSocialMediaAthlitika">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
-                    <div class="portfolio-card">
-                        <img src="img/social_media/6.rouxa/summer_sales_cc.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalSocialMediaRouxa">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
-                    <div class="portfolio-card">
-                        <img src="img/social_media/7.paintball/respawn.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalSocialMediaPaintBall">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
-                    <div class="portfolio-card">
-                        <img src="img/social_media/eidi_peripoiisis/comoprof_blackfriday_vafes_mallion.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalSocialMediaEidhPeripoiishs">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
-                    <div class="portfolio-card">
-                        <img src="img/social_media/petshop/skulotrofes.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalsocialMediaPetShop">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item socialMedia">
-                    <div class="portfolio-card">
-                        <img src="img/social_media/upiresies_ugeias/sixnes_erotiseis_a.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalsocialMediaYphresiasYgeias">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-
-                <!-- Newsletter -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item newsletters">
-                    <div class="portfolio-card">
-                        <img src="img/newsletter/eco/xiroi_karpoi.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalNeslettersEco">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item newsletters">
-                    <div class="portfolio-card">
-                        <img src="img/newsletter/lulumelon/lulumelon_xmas_mockup.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalNeslettersLulumelon">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Flyers -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item flyers">
-                    <div class="portfolio-card">
-                        <img src="img/flyer/asklipios/mockup_mesa.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalFlyerAsklipios">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item flyers">
-                    <div class="portfolio-card">
-                        <img src="img/flyer//digital_markt/mockup_b.jpg" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <a data-toggle="modal" data-target="#modalFlyerDigitalMartkt">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    <div class="lightbox__stage">
+      <button class="lightbox__nav lightbox__nav--prev" id="lb-prev" aria-label="Previous image">←</button>
+      <img id="lb-img" alt="">
+      <button class="lightbox__nav lightbox__nav--next" id="lb-next" aria-label="Next image">→</button>
     </div>
-    <!-- Portfolio End -->
+    <div class="lightbox__thumbs" id="lb-thumbs"></div>
+  </div>
 
-    <!-- Modals Starts -->
-    <div class="modal fade" id="modalAll">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/logos/little_garden/pinakida.jpg">
-                        <img src="img/logos/little_garden/mix.jpg">
-                        <img src="img/logos/little_garden/cups.jpg">
-
-                        <!-- SocialMedia -->
-                        <img src="img/logos/taskcode/Business_Card_b.jpg">
-                        <img src="img/logos/taskcode/metal.jpg">
-                        <img src="img/logos/taskcode/wall.jpg">
-
-                        <!-- Logo 3 -->
-                        <img src="img/logos/ahatis/Mockup_bottle_wine_agates.jpg">
-                        <img src="img/logos/ahatis/mockup_bottle.jpg">
-                        <img src="img/logos/ahatis/logo_mockup_toixos.jpg">
-
-                        <!-- Newsletter -->
-                        <img src="img/logos/diadrasi/mockup_tsanta_flyer.jpg">
-                        <img src="img/logos/diadrasi/mockup_skini.jpg">
-                        <img src="img/logos/diadrasi/theatro_mockup.jpg">
-
-                        <!-- Flyers -->
-                        <img src="img/logos/zen10/box.jpg">
-                        <img src="img/logos/zen10/fraoules_b.jpg">
-                        <img src="img/logos/zen10/bag.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalLogoAgates">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/logos/ahatis/logo_mockup_toixos.jpg">
-                        <img src="img/logos/ahatis/mockup_bottle.jpg">
-                        <img src="img/logos/ahatis/Mockup_bottle_wine_agates.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalLogoDiadrasi">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/logos/diadrasi/mockup_skini.jpg">
-                        <img src="img/logos/diadrasi/mockup_tsanta_flyer.jpg">
-                        <img src="img/logos/diadrasi/theatro_mockup.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal fade" id="modalLogoGarden">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/logos/little_garden/cups.jpg">
-                        <img src="img/logos/little_garden/mix.jpg">
-                        <img src="img/logos/little_garden/pinakida.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-        
-    <div class="modal fade" id="modalLogoTaskCode">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/logos/taskcode/Business_Card_b.jpg">
-                        <img src="img/logos/taskcode/metal.jpg">
-                        <img src="img/logos/taskcode/wall.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalLogoZenTen">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/logos/zen10/bag.jpg">
-                        <img src="img/logos/zen10/box.jpg">
-                        <img src="img/logos/zen10/fraoules_b.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalSocialMediaEco">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/social_media/1.eco/3+1_logoi_berries.jpg">
-                        <img src="img/social_media/1.eco/afepsima_mirtilou_4.jpg">
-                        <img src="img/social_media/1.eco/amugdala_wma_17_b.jpg">
-                        <img src="img/social_media/1.eco/blackberries_j.jpg">
-                        <img src="img/social_media/1.eco/blueberry_g.jpg">
-                        <img src="img/social_media/1.eco/frozen_mix_berries.jpg">
-                        <img src="img/social_media/1.eco/giveaway_amigdala_b.jpg">
-                        <img src="img/social_media/1.eco/giveaway_blueberies.jpg">
-                        <img src="img/social_media/1.eco/karidi_mualo.jpg">
-                        <img src="img/social_media/1.eco/xartis_b.jpg">
-                        <img src="img/social_media/1.eco/ximos_mirtilou_z.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalSocialMediaPharmachy">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/social_media/2.farmakeio/aloe_colors_intothesun.jpg">
-                        <img src="img/social_media/2.farmakeio/avgerinos_body_mist.jpg">
-                        <img src="img/social_media/2.farmakeio/avgerinos_ekptosi.jpg">
-                        <img src="img/social_media/2.farmakeio/avgerinos_primer.jpg">
-                        <img src="img/social_media/2.farmakeio/lavish_care_foundation.jpg">
-                        <img src="img/social_media/2.farmakeio/mesaudaskin_light_clear.jpg">
-                        <img src="img/social_media/2.farmakeio/mesaude_skin_hydraware.jpg">
-                        <img src="img/social_media/2.farmakeio/miss_kay_aromata.jpg">
-                        <img src="img/social_media/2.farmakeio/natura_siberica_biome_cleanser.jpg">
-                        <img src="img/social_media/2.farmakeio/organic_shop_bodywash_bathfoam.jpg">
-                        <img src="img/social_media/2.farmakeio/rilastil_kremaxerion_lipstick.jpg">
-                        <img src="img/social_media/2.farmakeio/youthlab_masks.jpg">
-                        <img src="img/social_media/2.farmakeio/youthlab_vit_c.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalSocialMediaEidhSpitiou">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/social_media/3.eidi_spitiou/guy_laroche_petsetes_thalassis.jpg">
-                        <img src="img/social_media/3.eidi_spitiou/nef_nef_paploma_mono_will_dance.jpg">
-                        <img src="img/social_media/3.eidi_spitiou/palamaiki_paidiki_petseta_thalassis.jpg">
-                        <img src="img/social_media/3.eidi_spitiou/petsetes_b.jpg">
-                        <img src="img/social_media/3.eidi_spitiou/rixtari_kanape_horizontal.jpg">
-                        <img src="img/social_media/3.eidi_spitiou/summer_giveaway.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalSocialMediaMesitiko">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/social_media/4.mesitiko/diafimisi_meta_katheto.jpg">
-                        <img src="img/social_media/4.mesitiko/spiti_oneiron.jpg">
-                        <img src="img/social_media/4.mesitiko/to_spiti_pou_anazitas_b.jpg">
-                        <img src="img/social_media/4.mesitiko/Vanguard_xalandri.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalSocialMediaAthlitika">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/social_media/5.athlitika/adidas_vs_pace.jpg">
-                        <img src="img/social_media/5.athlitika/converse_gunaikeio.jpg">
-                        <img src="img/social_media/5.athlitika/converse_paidika.jpg">
-                        <img src="img/social_media/5.athlitika/game_set_match.jpg">
-                        <img src="img/social_media/5.athlitika/Puma_ready.jpg">
-                        <img src="img/social_media/5.athlitika/trending_now_converce.jpg">
-                        <img src="img/social_media/5.athlitika/under_armour_gs_lockdown.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalSocialMediaRouxa">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/social_media/6.rouxa/kapela_oriz.jpg">
-                        <img src="img/social_media/6.rouxa/key.jpg">
-                        <img src="img/social_media/6.rouxa/magio_square.jpg">
-                        <img src="img/social_media/6.rouxa/mayfair_karl_tzin_poukamiso.jpg">
-                        <img src="img/social_media/6.rouxa/mayfair_pinko_mini_love_bag.jpg">
-                        <img src="img/social_media/6.rouxa/summer_sales_cc.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalSocialMediaPaintBall">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/social_media/7.paintball/respawn.jpg">
-                        <img src="img/social_media/7.paintball/SnapInsta.to_488205702_1171420551595541_6270127727000922556_n.jpg">
-                        <img src="img/social_media/7.paintball/SnapInsta.to_488961052_1177546350982961_2902190016765277787_n.jpg">
-                        <img src="img/social_media/7.paintball/SnapInsta.to_489456913_1176814567722806_2446642293216048711_n.jpg">
-                        <img src="img/social_media/7.paintball/SnapInsta.to_490022059_1179433497460913_5514216598474655233_n.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalSocialMediaEidhPeripoiishs">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/social_media/eidi_peripoiisis/comoprof_blackfriday_avgerinos.jpg">
-                        <img src="img/social_media/eidi_peripoiisis/comoprof_blackfriday_mixanes_kourematos.jpg">
-                        <img src="img/social_media/eidi_peripoiisis/comoprof_blackfriday_sesouar_mallion.jpg">
-                        <img src="img/social_media/eidi_peripoiisis/comoprof_blackfriday_vafes_mallion.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalsocialMediaPetShop">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/social_media/petshop/gatotrofes.jpg">
-                        <img src="img/social_media/petshop/paixnidia_skulou.jpg">
-                        <img src="img/social_media/petshop/skulotrofes.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalsocialMediaYphresiasYgeias">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/social_media/upiresies_ugeias/dorean_sunedria.jpg">
-                        <img src="img/social_media/upiresies_ugeias/kuklos_ponou.jpg">
-                        <img src="img/social_media/upiresies_ugeias/metakomizoume.jpg">
-                        <img src="img/social_media/upiresies_ugeias/quiz_ponos_meta_kalokairi-01.jpg">
-                        <img src="img/social_media/upiresies_ugeias/sixnes_erotiseis_a.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalNeslettersEco">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/newsletter/eco/berries_mockup.jpg">
-                        <img src="img/newsletter/eco/xiroi_karpoi.jpg">
-                        <img src="img/newsletter/eco/xristougeniatikes_suntages_mockup.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalNeslettersLulumelon">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/newsletter/lulumelon/lulumelon_cyber_monday_mockup.jpg">
-                        <img src="img/newsletter/lulumelon/lulumelon_mockup.jpg">
-                        <img src="img/newsletter/lulumelon/lulumelon_xmas_mockup.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalFlyerAsklipios">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/flyer/asklipios/mockup_mesa.jpg">
-                        <img src="img/flyer/asklipios/mockup_ola.jpg">
-                        <img src="img/flyer/asklipios/mockup_piso.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalFlyerDigitalMartkt">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="close custom-close" data-dismiss="modal">
-                        &times;
-                </button>
-                <div class="modal-body">
-                    <div class="project-grid">
-                        <img src="img/flyer/digital_markt/mockup_b.jpg">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Modals Ends -->
-    
-   <!-- Contact Start -->
-    <div class="container-fluid py-5" id="contact">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #005965;">Contact</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form text-center">
-                        <form action="https://formsubmit.co/iliana.anastasiadou7@gmail.com" method="POST">
-                            <div class="form-row">
-                                <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
-                                        required="required" data-validation-required-message="Please enter your name" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
-                                        required="required" data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4 mb-3" name="subject" placeholder="Subject" required>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control py-3 px-4 mb-3" rows="5" name="message" placeholder="Message" required></textarea>
-                            </div>
-                            <div>
-                                <button class="btn btn-outline-primary" type="submit">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
-
-<!-- Toast container -->
-<div id="toast" style="
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #28a745;
-    color: white;
-    text-align: center;
-    border-radius: 4px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1000;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
-">
-  Message sent successfully!
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.contact-form form');
-    const toast = document.getElementById('toast');
-
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault(); // Αποτροπή default submit και redirect
-
-        const formData = new FormData(form);
-
-        try {
-            const response = await fetch(form.action, {
-                method: form.method,
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            if (response.ok) {
-                // Καθαρίζουμε τη φόρμα
-                form.reset();
-
-                // Εμφάνιση toast
-                toast.style.visibility = 'visible';
-                toast.style.opacity = '1';
-                setTimeout(() => {
-                    toast.style.opacity = '0';
-                    toast.style.visibility = 'hidden';
-                }, 3000);
-            } else {
-                alert("There was an error sending the message.");
-            }
-        } catch (error) {
-            console.error(error);
-            alert("There was an error sending the message.");
-        }
-    });
-});
-</script>
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
-        <div class="container text-center py-5">
-            <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/iliana-anastasiadou/"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://www.behance.net/6c5097c4"><i class="fab fa-behance"></i></a>
-                <!-- <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a> -->
-            </div>
-            <p class="m-0">&copy; All Rights Reserved. Designed by <a class="text-white font-weight-bold">Iliana Anastasiadou</a>
-            </p>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Scroll to Bottom -->
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    
-
-
+  <script src="js/site.js"></script>
 </body>
-
 </html>
